@@ -3,20 +3,23 @@ draft 1
 
 ## Identity Subsystem
 codename: ausweis
+Subsystem serves the role of robust identity manager. Must support:
+- providing a strong cryptiographic proof of identity. Identity could be pseudonymous
+- linking user posts signed by different keys to a single identity
+- revoking compromised keys
 
 ### User-owned identity
 problem: must provide a way for user to persist presence across social networks, all of which are untrusted.
-solution: use https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API
-to sign the content?..
+solution (ideas): 
+- short-term: require a service running on user's desktop, which will work as a personal key server.
+- use https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API to sign the content?..
+- perhaps utilize some form of pgp?..
 
 ### Multiple browsers
 problem: user could use multiple browsers, hence multiple keys. how to ensure that identities are linked?
-solution: idk
 
 ### Hacked browsers
 problem: user creds could become compromised. need to establish a process of blocking compromised identity and replace it with new
-solution: idk
-
 
 ## Storage Subsystem
 codename: tamagochi
